@@ -60,6 +60,9 @@ function Board() {
     }
     return null
   }
+   function handleRestart() {
+    setSquare(Array(9).fill(null))
+  }
   return (
    <>
 
@@ -81,6 +84,7 @@ function Board() {
     <Square value={square[7]} onSquareClick={()=>handleClick(7)}/>
     <Square value={square[8]} onSquareClick={()=>handleClick(8)}/>
    </div>
+     <button onClick={handleRestart}>Re-start</button>
    </div>
    </>
   )
